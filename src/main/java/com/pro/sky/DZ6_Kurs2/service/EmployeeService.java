@@ -39,15 +39,16 @@ public class EmployeeService {
 
     public Employee find(String Name, String lastName) {
         for (Employee employee : employees) {
-            if (Name.equalsIgnoreCase(employee.getName()) & lastName.equalsIgnoreCase(employee.getLastName())) {
+            if (Name.equalsIgnoreCase(employee.getFirstName()) & lastName.equalsIgnoreCase(employee.getLastName())) {
                 return employee;
             }
         }
         throw new EmployeeNotFoundException();
     }
 
-    public List<Employee>getAll(){
-       return Collections.unmodifiableList(employees);
+    public List<Employee> getAll() {
+        return Collections.unmodifiableList(employees);
     }
-
 }
+
+
