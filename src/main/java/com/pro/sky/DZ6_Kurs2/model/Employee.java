@@ -30,12 +30,10 @@ public class Employee {
         if (!(o instanceof Employee employee)) return false;
         return firstName.equals(employee.firstName) && lastName.equals(employee.lastName);
     }
-
     @Override
     public int hashCode() {
         return Objects.hash(firstName, lastName);
     }
-
     @Override
     public String toString() {
         return "Employee{" +
